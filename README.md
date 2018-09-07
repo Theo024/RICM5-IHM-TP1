@@ -1,6 +1,6 @@
 # RICM5 - IHM - TP1
 
-> Théo Lévesque - Timothée Depriester \
+> Théo Lévesque - Timothée Depriester
 > Polytech Grenoble - 2018
 
 ## Question 2.1
@@ -24,3 +24,10 @@ void setValueIsAdjusting(boolean b)
 ```
 
 ## Question 2.2
+
+- Lorsque l'on déplace le curseur minimum, respectivement maximum, la valeur associée s'ajuste. Le curseur maximum doit toujours être à droite du curseur minimum. Les deux curseurs peuvent prendre la même valeur.
+- Lorsque l'on clique sur la partie extérieure du slider, la valeur de la borne la plus proche est modifiée.
+
+## Question 2.3
+
+Voir code.
