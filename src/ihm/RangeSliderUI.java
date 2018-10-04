@@ -210,11 +210,13 @@ public class RangeSliderUI extends BasicSliderUI {
                 thumbLeft = Math.max(thumbLeft, trackLeft - halfThumbWidth);
                 thumbLeft = Math.min(thumbLeft, trackRight - halfThumbWidth);
 
-                setThumbLocation(thumbLeft, thumbRect.y);
-
                 thumbMiddle = thumbLeft + halfThumbWidth;
+                int thumbRight = thumbLeft + thumbRect.width;
 
-                slider.setValue(valueForXPosition(thumbMiddle));
+                if (valueForXPosition(thumbRight) < ((RangeSlider) slider).getUpperValue()) {
+                    setThumbLocation(thumbLeft, thumbRect.y);
+                    slider.setValue(valueForXPosition(thumbMiddle));
+                }
             }
 
             if (isDraggingUpper) {
@@ -233,11 +235,12 @@ public class RangeSliderUI extends BasicSliderUI {
                 thumbLeft = Math.max(thumbLeft, trackLeft - halfThumbWidth);
                 thumbLeft = Math.min(thumbLeft, trackRight - halfThumbWidth);
 
-                setUpperThumbLocation(thumbLeft, upperThumb.y);
-
                 thumbMiddle = thumbLeft + halfThumbWidth;
 
-                ((RangeSlider) slider).setUpperValue(valueForXPosition(thumbMiddle));
+                if (valueForXPosition(thumbLeft) > slider.getValue()) {
+                    setUpperThumbLocation(thumbLeft, upperThumb.y);
+                    ((RangeSlider) slider).setUpperValue(valueForXPosition(thumbMiddle));
+                }
             }
         }
 
