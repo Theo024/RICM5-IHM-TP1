@@ -6,21 +6,25 @@
 ## Question 2.1
 
 ``` java
-void addChangeListener(ChangeListener x)
+int getValue()
+int getUpperValue()
 int getExtent()
-int getMaximum()
+int getUpperExtent()
 int getMinimum()
-int getMaximumValue()
-int getMinimumValue()
-boolean getValueIsAdjusting()
-void removeChangeListener(ChangeListener x)
-void setExtent(int newExtent)
-void setMaximum(int newMaximum)
-void setMinimum(int newMinimum)
-void setRangeProperties(int maxValue, int minValue, int extent, int min, int max, boolean adjusting)
-void setMaximumValue(int newValue)
-void setMinimumValue(int newValue)
+int getMaximum()
+void setValue(int n)
+void setUpperValue(int n)
+void setExtent(int n)
+void setUpperExtent(int n)
+void setMinimum(int n)
+void setMaximum(int n)
 void setValueIsAdjusting(boolean b)
+boolean getValueIsAdjusting()
+void setRangeProperties(int newValue, int newExtent, int newUpperValue, int newUpperExtent, int newMin, int newMax, boolean adjusting)
+void addChangeListener(ChangeListener l)
+void removeChangeListener(ChangeListener l)
+ChangeListener[] getChangeListeners()
+<T extends EventListener> T[] getListeners(Class<T> listenerType)
 ```
 
 ## Question 2.2
